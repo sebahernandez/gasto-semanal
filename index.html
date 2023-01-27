@@ -13,13 +13,24 @@
   <body>
     <div class="container">
         <header>
-                <h1 class="text-center">Gasto Semanal</h1>
+                <h1 class="text-center">Tus gastos semanales</h1>
+                <p class="text-center text-white">Aplicación realizada en Vanilla JS</p>
         </header>
         <section class="contenido-principal">
             <div class="row">
                 <div class="col ">
                     <div class="contenido primario">
                         <h2 class="text-center">Añade tus gastos aqui</h2>
+
+                            <form id="add-monto" action="#" class="my-5">
+                                <div class="form-group">
+                                    <label for="nombre">Añadir Monto:</label>
+                                    <input type="text" class="form-control" id="monto" placeholder="Monto a ingresar">
+                                </div>
+                                <button id="montoBtn" class="btn btn-success my-2">Agregar Monto</button>
+                            </form>
+
+
                             <form id="agregar-gasto" action="#">
                                 <div class="form-group">
                                     <label for="gasto">Gasto:</label>
@@ -30,7 +41,7 @@
                                     <input type="text" class="form-control" id="cantidad" placeholder="Cantidad en $">
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Agregar</button>
+                                <button id="agregar-monto" type="submit" class="btn btn-danger">Agregar Gasto</button>
                             </form>
 
                     </div> <!--.contenido-->

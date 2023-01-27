@@ -1,15 +1,30 @@
 // variables 
 const formulario = document.querySelector('#agregar-gasto');
 const gastoListado = document.querySelector('#gastos ul');
-
+const montoBtn = document.querySelector('#montoBtn');
 
 // eventos 
-eventListener();
-function eventListener(){
-    document.addEventListener('DOMContentLoaded', preguntarPresupuesto);
-    /* formulario.addEventListener('submit', agregarGasto); */
+function handleMontoBtnClick() {
+    const input = document.querySelector('#monto');
+    const presupuestoUsuario = input.value;
+
+    if (presupuestoUsuario === '' || presupuestoUsuario === null || isNaN(presupuestoUsuario) || presupuestoUsuario <= 0) {
+        ui.imprimirAlerta('Monto no valido', 'error');
+        return;
+    }
+
+    presupuesto = new Presupuesto(presupuestoUsuario);  
+    console.log(presupuesto);
+    // se pasa el objeto completo de presupuesto
+    ui.insertarPresupuesto(presupuesto);
+
     formulario.addEventListener('submit', agregarGasto);
+    input.value = '';
 }
+
+montoBtn.addEventListener('click', handleMontoBtnClick);
+    
+   
 
 // clases
 class Presupuesto {
@@ -61,6 +76,7 @@ class UI{
         divMensaje.textContent = mensaje;
 
         // insertar en el html
+     
         document.querySelector('.primario').insertBefore(divMensaje, formulario);
 
         // quitar el html
@@ -140,21 +156,6 @@ const ui = new UI();
 let presupuesto;
 
 // funciones
-
-function preguntarPresupuesto(){
-    const presupuestoUsuario = prompt('¿Cual es tu presupuesto?');
-
-    if(presupuestoUsuario === '' || presupuestoUsuario === null || isNaN(presupuestoUsuario) || presupuestoUsuario <= 0){
-        window.location.reload();
-    }
-
-    // presupuesto valido
-    presupuesto = new Presupuesto(presupuestoUsuario);  
-    console.log(presupuesto);
-
-    // se pasa el objeto completo de presupuesto
-    ui.insertarPresupuesto(presupuesto);
-}
 
 // añade gastos
 
