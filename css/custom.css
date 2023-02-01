@@ -4,8 +4,7 @@ html {
 
 body {
    
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-color: #fffffe;
 
 }
 header {
@@ -15,7 +14,7 @@ header {
     padding:20px;
 }
 .contenido-principal {
-    background-color: white;
+    background-color: #fff;
     padding: 30px;
     border-radius: 20px;
     box-shadow:
@@ -37,7 +36,7 @@ header {
 h1{
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
-    color: white;
+    color: #094067;
 }
 h2 {
     font-family: 'Raleway', sans-serif;
@@ -46,3 +45,14 @@ h2 {
     font-size: 22px;
     margin-bottom:30px;
 }
+.btn-bg{
+    background-color: #ef4565;
+    color: #fff;
+    padding: 10px 34px;
+}
+.btn-bg-2{
+    background-color: #3da9fc;
+    color: #fff;
+    padding: 10px 34px;
+}
+

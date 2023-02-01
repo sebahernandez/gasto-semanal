@@ -13,21 +13,21 @@
   <body>
     <div class="container">
         <header>
-                <h1 class="text-center">Tus gastos semanales</h1>
-                <p class="text-center text-white">Aplicación realizada en Vanilla JS</p>
+                <h1 class="text-center font-weight-bold">WeekCost</h1>
+                <p class="text-center">Lleva en orden tus cuentras controlando tus gastos semanales</p>
         </header>
         <section class="contenido-principal">
             <div class="row">
                 <div class="col ">
                     <div class="contenido primario">
-                        <h2 class="text-center">Añade tus gastos aqui</h2>
+                        <h2 class="text-left">Añade tus gastos aqui</h2>
 
                             <form id="add-monto" action="#" class="my-5">
                                 <div class="form-group">
                                     <label for="nombre">Añadir Monto:</label>
                                     <input type="text" class="form-control" id="monto" placeholder="Monto a ingresar">
                                 </div>
-                                <button id="montoBtn" class="btn btn-success my-2">Agregar Monto</button>
+                                <button id="montoBtn" class="btn  my-2 btn-bg-2">Agregar Monto</button>
                             </form>
 
 
@@ -41,7 +41,7 @@
                                     <input type="text" class="form-control" id="cantidad" placeholder="Cantidad en $">
                                 </div>
 
-                                <button id="agregar-monto" type="submit" class="btn btn-danger">Agregar Gasto</button>
+                                <button id="agregar-monto" type="submit" class="btn btn-bg">Agregar Gasto</button>
                             </form>
 
                     </div> <!--.contenido-->
@@ -50,7 +50,7 @@
                 <div class="col">
                     <div class="contenido secundario">
 
-                        <h2 class="text-center">Listado</h2>
+                        <h2 class="text-left">Listado:</h2>
 
                         <div id="gastos">
                             <ul class="list-group"></ul>
